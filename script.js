@@ -1,23 +1,14 @@
 // 1. Checkboxen
-// Använder: document.getElementById()
 const checkbox = document.getElementById("divStyle");
 
-
 // 2. Alla textfält (<input type="text">)
-// Använder: document.getElementsByClassName()
 const textfields = document.getElementsByClassName("textfield");
 
-
 // 3. Knappen
-// Använder: document.querySelector()
-const button = document.querySelector("#myButton");
+const button = document.getElementById("myButton");
 
-
-// 4. Div-elementet
-// Använder: document.querySelectorAll() för att visa variation
-// (men vi tar första elementet i NodeList)
-const resultBox = document.querySelectorAll("#resultBox")[0];
-
+// 4. Div-elementet (OBS: använd getElementById här!)
+const resultBox = document.getElementById("resultBox");
 
 // Testa i konsolen att allting laddats korrekt
 console.log(checkbox);
@@ -42,24 +33,26 @@ function handleInput(e) {
         resultBox.innerHTML = e.target.value;
     }
 }
-// === Checkboxens eventlyssnare ===
+
+//Checkboxens eventlyssnare
 checkbox.addEventListener("change", function () {
-    
-    // Hämta färgen från textfälten (samlingen)
-    // textfields[0] är "color" eftersom båda textfälten har class="textfield"
+
+    //Vi hämtar färgen från textfälten
+    //textfields[0] är "color" eftersom båda textfälten har class="textfield"
     const colorValue = textfields[0].value;
 
-    // Sätt bakgrundsfärgen på div-elementet
+    //Sätter bakgrundsfärgen på div-elementet
     resultBox.style.backgroundColor = colorValue;
 });
-// === Eventlyssnare till textfälten ===
+
+//Eventlyssnare till textfälten
 for (let i = 0; i < textfields.length; i++) {
     textfields[i].addEventListener("input", handleInput);
 }
-// === Knappens eventlyssnare ===
+
+//Knappens eventlyssnare
 button.addEventListener("click", function () {
 
-    // Ta bort div-elementet från DOM
+    //Ta bort div-elementet från DOM
     resultBox.remove();
-
 });
