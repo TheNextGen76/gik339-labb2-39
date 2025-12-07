@@ -1,37 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labb 2 Grupp 39</title>
+    <title>Labb 2 - Grupp 39</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <title>Labb 2 Grupp 39</title>
-    <label for="color">Färg:</label>
-    <input 
-    type="text"
-    name="color"
-    id="color"
-    class="textfield"
-    >
-    <label for="content">Innehåll:</label>
-    <input 
-    type="text"
-    name="content"
-    id="content"
-    class="textfield"
-    >
-    <label for="divStyle">Stil på box:</label>
-    <input 
-    type="text"
-    name="divStyle"
-    id="divStyle"
-    class="checkbox"
-    >
-    <label for="button">knapp</label>
-    <button id="button">
-    </button>
-    <div id="divID">Denna div finns</div>
+
+    <div class="page">
+        <h1>Labb 2 - Grupp 39</h1>
+
+        <div class="card">
+            <form class="form">
+
+                
+                <div class="form-row">
+                    <label for="color">Färg</label>
+                    <input 
+                        type="text" 
+                        name="color"
+                        id="color"
+                        class="textfield">
+                </div>
+
+                
+                <div class="form-row">
+                    <label for="content">Innehåll</label>
+                    <input 
+                        type="text" 
+                        name="content"
+                        id="content"
+                        class="textfield">
+                </div>
+
+                
+                <div class="form-row">
+                    <label for="divStyle">Stil på box</label>
+                    <input 
+                        type="checkbox" 
+                        name="divStyle"
+                        id="divStyle"
+                        class="checkbox">
+                </div>
+
+                
+                <button type="button" id="myButton" class="btn-remove">
+                    Kör funktion
+                </button>
+
+            </form>
+
+            
+            <div id="resultBox" class="box-output">
+                Ska vara tom
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
+
